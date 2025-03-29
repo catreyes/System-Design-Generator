@@ -77,7 +77,8 @@ with st.sidebar:
     st.markdown("---")
     st.subheader("System Assumptions")
     for k, v in problem_types[problem]["params"].items():
-        st.number_input(k, value=v, step=1, disabled=True)
+        step = 0.1 if isinstance(v, float) else 1
+        st.number_input(k, value=v, step=step, disabled=True)
 
 # --- MAIN ---
 st.subheader("1. Capacity Estimation Inputs")
