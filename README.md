@@ -1,62 +1,28 @@
-# System Design Assistant (Streamlit App)
 
-A web-based interactive tool to help you rapidly design scalable systems for interviews, architecture reviews, or internal planning.
+# System Design Assistant (Version 3)
 
-Built with [Streamlit](https://streamlit.io), this assistant provides:
-
-- Problem-type-driven system design presets
-- Capacity estimation for QPS, storage, and replication
-- Auto-filled system constraints (latency, cache, uptime, retention)
-- Database recommendations and rationale
-- Clear, metrics-based outputs
-- Instant visual feedback for toggles and configuration
-
-## Live Demo
-[Launch the App on Streamlit](https://streamlit.io/cloud) *(once deployed)*
-
----
+An interactive architecture generator built with Streamlit to help you prepare for system design interviews and technical reviews.
 
 ## Features
+- Editable problem type presets
+- Capacity estimation (QPS, storage, peak traffic)
+- SLO & latency budget modeling
+- Failure simulation + mitigation planner
+- Architecture layer suggestions
+- CAP & PACELC trade-off frameworks
+- Interview walkthrough generator
+- Downloadable summary (Markdown/CSV)
+- Custom theme + streamlit-extras
 
-### 1. Problem Type Selector
-Choose from real-world system types like:
-- Social Media Feed
-- Real-Time Chat
-- Video Streaming
-- Metrics Ingestion
-- Secure File Storage
-- Data Warehouse
-- E-Commerce Checkout
+## Run Locally
+```
+pip install -r requirements.txt
+streamlit run system_design_tool_app_v3.py
+```
 
-Each selection auto-fills best-practice values for:
-- Retention, latency, cache hit rate, replication
-- Toggle flags like CDN, Compression, PII compliance
-
----
-
-### 2. Capacity Estimator
-Inputs:
-- Number of users, DAU, requests per user
-- Object size, replication factor, peak multiplier
-
-Outputs:
-- Read & write QPS
-- Peak QPS
-- Estimated storage in GB (with replication)
-
----
-
-### 3. Architecture & DB Recommendations
-Get suggestions for:
-- Database types (SQL, NoSQL, TSDB, Blob)
-- Example technologies
-- Rationale tailored to system type
-
----
-
-## Getting Started
-
-### 1. Clone the Repo
-```bash
-git clone https://github.com/YOUR_USERNAME/system-design-assistant.git
-cd system-design-assistant
+## Deploy to Streamlit Cloud
+1. Push this repo to GitHub
+2. Visit https://streamlit.io/cloud
+3. Click "New App", select this repo
+4. Set the file path to `system_design_tool_app_v3.py`
+5. Click Deploy
